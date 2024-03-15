@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "pf-marlet-display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  user-select: none;
+}
+
+.wrapper {
+  background-color: #f3eae3;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.innerContainer {
+  width: 600px;
+  height: 450px;
+  background: #ffffff;
+  border-radius: 0.7em;
+  display: flex;
+  flex-flow: row;
+  object-fit: cover;
+}
+
+img {
+  border-top-left-radius: 0.7em;
+  border-bottom-left-radius: 0.7em;
+}
+
+@media (max-width: 768px) {
+  img {
+    content: url("./images/image-product-mobile.jpg");
+    border-top-right-radius: 0.7em;
+    border-bottom-left-radius: 0;
+  }
+  .innerContainer {
+    flex-flow: column;
+    width: 450px;
+    height: fit-content;
+  }
+}
+
+.mainText {
+  color: #b9babd;
+}
+
+.title {
+  font-size: 0.8em;
+  color: #8f9091;
+}
+
+.right {
+  margin: 5%;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.discount {
+  font-size: 2em;
+  font-weight: 700;
+  color: #427b67;
+}
+
+.original {
+  font-size: 0.8em;
+  text-decoration: line-through solid;
+}
+
+.addCart {
+  font: inherit;
+  font-size: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  width: 12.5em;
+  height: 2.5em;
+  margin: auto;
+  outline: none;
+  border: none;
+  background-color: #3d8168;
+  color: #e8faf4;
+  border-radius: 0.7em;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.addCart:hover {
+  background-color: #54a185;
+}
+
+.addCart:active {
+  transform: scale(0.98);
+}
